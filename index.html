@@ -5,13 +5,33 @@
     <meta charset="UTF-8" />
     <title>Drag Test</title>
     <style>
+         #message-box {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #120e42;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgb(14, 18, 27);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+  }
+
+  .hidden {
+    display: none;
+  }
         #draggable {
             position: absolute;
+            border-radius: 8px;
             top: 100px;
-            left: 100px;
-            width: 150px;
+            left: 80px;
+            width: 130px;
             height: 100px;
-            background-color: lightblue;
+            color: #fff;
+            background-color: rgb(14, 15, 74);
             text-align: center;
             line-height: 100px;
             cursor: move;
@@ -27,6 +47,7 @@
     <script src="js/Utilities.js"></script>
     <script src="js/DragDrop.js"></script>
     <script src="js/app.js"></script>
+    <div id="message-box" class="hidden"></div>
 
 </body>
 
