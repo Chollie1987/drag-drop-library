@@ -17,12 +17,12 @@
         - GridControl.js -->  logic for creating scrollable/resizable grid
         - app.js --> implement page behavior
 
-    3. Used multiple .js files to store related functions
+3. Used multiple .js files to store related functions
 
-    4. Created functions that allow youto drag a text box with x, y position tracking
+4. Created functions that allow youto drag a text box with x, y position tracking
 
-    5. Added a message box that pops up with the new X and Y coordinates
+5. Added a message box that pops up with the new X and Y coordinates
 
-    6. Returns information to the app based on location
+6. Returns information to the app based on location
 
-    7. Coordinates save to local storage
+7. Coordinates save to local storage
