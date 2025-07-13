@@ -5,10 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const { x, y } = JSON.parse(saved);
     const box = document.getElementById('draggable');
       box.style.left = `${x}px`;
-      box.style.right = `${y}px`;
+      box.style.top = `${y}px`;
   }
   
   MiniLib.makeDraggable('draggable', MiniLib.showCoordinates);
+
+  if(typeof createResizableTable === 'function') {
+    createResizableTable(3, 4);
+    createFlowBox('Start')
+  }
 });
 
 

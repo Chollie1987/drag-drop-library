@@ -1,12 +1,24 @@
-function showCoordinates(x, y) {
-  const box = document.getElementById('message-box');
-  box.textContent = `📍 Your new position: X = ${x}, Y = ${y}`;
-  box.classList.remove('hidden');
+function showMessage(message) {
+   const box = document.getElementById('message-box');
+   if (!box) {
+    console.warn('⚠ message-box not found in the DOM')
+   }
+   
+   box.textContent = message;
+   box.classList.remove('hidden')
+   
+   setTimeout(() => {
+     box.classList.add('hidden');
+   }, 3000);
+}
 
+function showCoordinates(x, y) {
+  showMessage(`📍 Your new position: X = ${x}, Y = ${y}`);
   // Auto-hide after 3 seconds
-  setTimeout(() => {
-    box.classList.add('hidden');
-  }, 3000);
+}
+
+function generateId(prefix = 'item') {
+  return `${prefix}-${Math.floor(Math.random() * 100000)}`;
 }
 
 // function showCoordinates(x, y) {
