@@ -1,0 +1,24 @@
+{
+  "name": "drag-drop-library",
+  "version": "1.0.0",
+  "description": "**Created file**",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chollie1987/drag-drop-library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chollie1987/drag-drop-library/issues"
+  },
+  "homepage": "https://github.com/Chollie1987/drag-drop-library#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

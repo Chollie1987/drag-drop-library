@@ -71,6 +71,13 @@ text-align: center;
 
     <div id="draggable">Drag me!</div>
 
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+      <button onclick="saveLayout()">💾 Save</button>
+      <button onclick="loadLayout()">📦 Load</button>
+      <button onclick="resetLayout()">🔁 Reset</button>
+      <button onclick="createFlowStepSvg(`step${Date.now()}`, 'New Step')">➕ Add Step</button>
+
+    </div>
     <!-- Js files -->
     <script src="js/Utilities.js"></script>
     <script src="js/FlowChart.js"></script>
@@ -81,6 +88,7 @@ text-align: center;
     <div id="message-box" class="hidden"></div>
     <table class="resizable-grid">
     <div id="grid-container"></div>
+    
 
 
 
