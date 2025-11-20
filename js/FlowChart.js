@@ -1,4 +1,4 @@
-function createFlowStepSvg(id, label, x = 100, y = 100, category = 'default') {
+function createFlowStepSvg(id, label, x = 100, y = 100) {
   const svgNS = "http://www.w3.org/2000/svg";
   const svg = document.createElementNS(svgNS, "svg");
   svg.setAttribute("width", "150");
@@ -26,6 +26,32 @@ function createFlowStepSvg(id, label, x = 100, y = 100, category = 'default') {
   text.setAttribute("font-size", "16");
   text.setAttribute("font-family", "sans-serif");
   text.textContent = label;
+
+  // A double-click event to edit label
+  text.addEventListener("dblclick", (e) => {
+    e.stopPropagation(); // Stop a dragging conflict
+    const input = document.createElement("input");
+    input.value = text.textContent;
+    input.style.position = "absolute";
+    input.style.left = `${svg.offsetLeft + 10}px`;
+    input.style.top = `${svg.offsetTop + 35}px`;
+    input.style.fontSize = "16px";
+    input.style.zIndex = 1000;
+
+    document.body.appendChild(input);
+    input.focus();
+
+    input.addEventListener("blur", () => {
+      text.textContent = input.value;
+      input.remove();
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        input.blur();
+      }
+    });
+  });
 
   svg.appendChild(rect);
   svg.appendChild(text);
